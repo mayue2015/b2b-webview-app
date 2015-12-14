@@ -1,0 +1,40 @@
+<div class="g-config-panel">
+	<div class="g-config-item">
+		<div class="g-config-item-title">收货人信息:</div>
+		<p class="g-config-item-info">{{userInfo.realname}}&nbsp;&nbsp;{{userInfo.telephone}}</p>
+		<p class="g-config-item-info">店名:{{userInfo.name}}</p>
+		<p class="g-config-item-info">地址:{{userInfo.address}}</p>
+		<!--<p class="g-config-item-info">店的ID:{{userInfo.restaurantNumber}}</p>-->
+	</div>
+	<div class="g-config-item">
+		<div class="g-config-item-title">支付方式:</div>
+		<p class="g-config-item-info">货到付款</p>
+	</div>
+	<div class="g-config-item">
+		<div class="g-config-item-title">配送方式:</div>
+		<p class="g-config-item-info">预计{{sendTime}}送达</p>
+	</div>
+	<div class="g-config-item">
+		<div class="g-config-item-title">商品信息:</div>
+		<div class="g-config-item-product">
+			<div class="g-product-item" ng-repeat="productList in productInfo">
+				<img class="g-item-product-icon" width="117" height="116" ng-src="{{productList.url}}" />
+				<div class="g-item-product-info">
+					<div class="g-item-product-title">{{productList.name}}</div>
+					<div class="g-item-product-sum">数量:×{{productList.number}}</div>
+					<div class="g-item-product-price">￥{{productList.money}}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="g-config-cost-bar">
+		<div class="g-config-bar-info">
+			<span class="g-config-bar-title">实付款:</span>
+			<span class="g-config-bar-cost">￥{{cost}}</span>
+			<br />
+			<span class="g-config-bar-title">其中运费:</span>
+			<span class="g-config-bar-cost">￥{{sendCost}}</span>
+		</div>
+		<div class="g-config-bar-submit" ng-click="upOrder();">确认订单</div>
+	</div>
+</div>

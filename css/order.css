@@ -1,0 +1,89 @@
+.o-panel {
+	width:100%;
+	height:100%;
+	font-size:30px;
+	position:relative;
+	padding:97px 0px 0px 0px;
+	background-color:#ffffff;
+}
+.o-order-panel {
+	width: 100%;
+	margin: 0px auto;
+}
+.o-order-row {
+	width: 100%;
+	display: table;
+}
+.o-order-td {
+	color: #666c70;
+	height: 80px;
+	text-align: center;
+	vertical-align: middle;
+	display: table-cell;
+	border-bottom: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+}
+.o-order-td:last-of-type {
+	border-right: 0px;
+}
+.oNow {
+	color: #d43030;
+}
+.o-order-item {
+	width: 680px;
+	margin: 0px auto 0px auto;
+	padding:30px 0px 30px 40px;
+	position: relative;
+	border-bottom:1px solid #cccccc;
+	background-color: #ffffff;
+}
+.o-order-item-word {
+	width: 649px;
+	background-color: #ffffff;
+	margin-left: 30px;
+	font-size: 26px;
+	line-height: 1.5em;
+	margin-bottom: 30px;
+}
+.o-order-red {
+	color: #eb2828;
+}
+.o-order-item-img-div {
+	margin-left: 30px;
+}
+.o-order-item-img {
+	width: 90px;
+}
+.o-order-item-comment-div {
+	width: 100%;
+	height: 100px;
+	font-size: 24px;
+	line-height: 100px;
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+}
+.o-order-item-comment-div>span {
+	margin-left: 30px;
+	color: #aaa;
+}
+.o-order-item-comment-btn {
+	height: 57px;
+	width: 110px;
+	-webkit-appearance:none;
+	background-color: #fff;
+	float: right;
+	margin-top: 20px;
+	margin-right: 30px;
+	color: #d43030;
+	border-radius: 8px;
+	border: 1px solid #d43030;
+	font-size: 26px;
+}
+.o-order-item-arrow {
+	width: 22px;
+	height: 39px;
+	background: url(../images/order-arrow.png);
+	position: absolute;
+	right: 30px;
+	top: 190px;
+}

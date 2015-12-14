@@ -1,0 +1,84 @@
+body{
+	margin:0px;
+	padding:0px;
+	background-color:#f4f4f4;
+}
+*{
+	outline:medium;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+a{
+	display:inline-table;
+	text-decoration:none;
+}
+.public-car{
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	height:112px;
+	background-color:#f8f8f8;
+	border-top:1px solid #b4b4b4;
+	z-index:991;
+}
+.public-info-panel{
+	position:relative;
+	display:table;
+	margin:0px auto 0px auto;
+	padding:0px 30px 0px 90px;
+	width:600px;
+	color:#323232;
+	font-weight:bold;
+}
+.public-info-title{
+	position:relative;
+	display:inline-table;
+	vertical-align:top;
+	font-size:30px;
+	line-height:112px;
+}
+.public-info-detail{
+	position:relative;
+	display:inline-table;
+	vertical-align:top;
+	font-size:26px;
+}
+.public-info-detail p{
+	width:240px;
+	margin:22px 0px 5px 0px;
+}
+.public-info-cost{
+	font-size:30px;
+	color:#d43030;
+}
+.public-info-submit{
+	position:relative;
+	float:right;
+	vertical-align:top;
+	margin:15px 0px 0px 0px;
+	width:189px;
+	height:83px;
+	line-height:83px;
+	text-align:center;
+	font-size:32px;
+	color:#ffffff;
+	background-color:#eb2828;
+	border-radius:8px;
+}
+.app-lead{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background:url(../images/lead.png) no-repeat;
+	background-size:100% 100%;
+	background-position:center center;
+	z-index:99999;
+}
+.app-lead-click{
+	position: relative;
+	margin: 90% auto 0px auto;
+	width: 300px;
+	height: 100px;
+}

@@ -1,0 +1,21 @@
+<div class="i-buy-panel">
+	<div class="i-buy-list-panel">
+		<div class="car-buy-list-item" id="item-{{$index}}" ng-repeat="list in carList" i-script>
+			<div class="i-buy-select {{chose_item}}" ng-click="ChoseItem(this);"></div>
+			<img class="car-buy-icon" width="140" height="194" ng-src="{{list.url}}" />
+			<div class="i-buy-introduce">
+				<div class="i-buy-introduce-title">{{list.name}}</div>
+				<span class="i-buy-introduce-price">￥{{list.price}}</span>
+				<div class="i-buy-introduce-sumbox">
+					<div class="i-buy-sumbox">{{list.number}}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="i-buy-info-panel">
+		<div class="i-table-panel">
+			<div class="i-buy-info-select {{chose_all}}" ng-class="{chose:chose_length == item_length}" ng-click="ChoseAll(this);"><span>全选</span></div>
+			<div class="i-buy-info-submit" ng-click="deleteCar();">删除</div>
+		</div>
+	</div>
+</div>

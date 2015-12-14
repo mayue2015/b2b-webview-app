@@ -1,0 +1,142 @@
+.c-category-panel{
+	position:relative;
+	margin:0px auto 0px auto;
+	padding:176px 0px 0px 0px;
+	background-color:#ffffff;
+}
+.c-nologin-alert{
+	position:fixed;
+	top:97px;
+	left:0px;
+	width:100%;
+	height:79px;
+	line-height:79px;
+	text-align:center;
+	font-size:28px;
+	color:#f32121;
+	background:rgba(0,0,0,0.7);
+	z-index:994;
+}
+.c-search-panel{
+	position:fixed;
+	padding:14px 0px 14px 0px;
+	top:97px;
+	left:0px;
+	width:100%;
+	height:50px;
+	text-align:center;
+	background-color:#eeeeee;
+	border-bottom:1px solid #c8c8c8;
+	z-index:993;
+}
+.c-search-input{
+	position:relative;
+	margin:0px auto 0px auto;
+	width:680px;
+	height:50px;
+	font-size:24px;
+	color:#646464;
+	background-color:#ffffff;
+	border-radius:8px;
+}
+.c-search-icon{
+	position:relative;
+	vertical-align:middle;
+	display:inline-table;
+	margin:0px 10px 0px 0px;
+	width:26px;
+	height:50px;
+	background:url(../images/search-icon.png) no-repeat;
+	background-size:100%;
+	background-position:center;
+}
+.c-search-hold{
+	vertical-align:middle;
+}
+.c-category-list{
+	display:inline-block;
+	margin:0px auto 0px auto;
+	list-style-type:none;
+	-webkit-padding-start:0px;
+}
+.c-category-item{
+	position:relative;
+	width:200px;
+	height:149px;
+	font-size:30px;
+	color:#282828;
+	text-align:center;
+	background-color:#eeeeee;
+	border-bottom:1px solid #c8c8c8;
+}
+.c-category-item-panel{
+	position:relative;
+	display:table;
+	vertical-align:top;
+	margin:0px auto 0px auto;
+	padding:12% 0px 0px 0px;
+}
+.c-category-icon{
+	position:relative;
+	display:inline-table;
+	vertical-align:middle;
+	margin:0px 20px 0px 0px;
+	width:60px;
+	height:96px;
+}
+.c-category-title{
+	position:relative;
+	display:inline-table;
+	vertical-align:middle;
+	width:90px;
+	text-align:center;
+}
+.c-category-list .chose{
+	color:#d43030;
+	background-color:#ffffff;
+	border-bottom:0px solid #c8c8c8;
+}
+.c-chosebar{
+	position:absolute;
+	bottom:0px;
+	left:10px;
+	width:180px;
+	height:6px;
+}
+.chose .c-chosebar{
+	background-color:#bc2b2b;
+}
+.c-category-detil-panel{
+	position:fixed;
+	padding:40px 14px 0px 14px;
+	top:175px;
+	right:0px;
+	width:485px;
+	text-align:left;
+}
+.c-category-detil-item{
+	position:relative;
+	float:left;
+	margin:0px 10px 34px 0px;
+	width:145px;
+	height:65px;
+	line-height:65px;
+	text-align:center;
+	font-size:28px;
+	/*color:#d43030;*/
+	color:#3c3c3c;
+	background-color:#fff6f6;
+	border-radius:8px;
+}
+.c-category-detil-panel .chose{
+	color:#d43030;
+}
+.c-service-icon{
+	position:relative;
+	margin:0px auto 0px auto;
+	width:32px;
+	height:96px;
+	background:url(../images/category-service.png) no-repeat;
+	background-size:100%;
+	background-position:center;
+}

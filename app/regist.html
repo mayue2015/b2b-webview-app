@@ -1,0 +1,80 @@
+<div class="r-panel">
+	<div class="r-regist-panel">
+		<div class="r-regist-div">
+			<input type="text" value="" ng-model="registInfo.telephone" onkeyup="this.value=this.value.replace(/\D/g,'');" class="r-regist-input" placeholder="请输入手机号" />
+		</div>
+		<div class="r-regist-div">
+			<input type="password" value="" ng-model="registInfo.password" class="r-regist-input" placeholder="请设置6-12位英文/数字/符号密码" />
+		</div>
+		<div class="r-regist-div">
+			<input type="password" value="" ng-model="rePassword" class="r-regist-input" placeholder="请再次输入密码" />
+		</div>
+		<div class="r-regist-div">
+			<label>
+				<div class="r-regist-radio" ng-click="hasRestaurant(1)" ng-class="{ radioCheck:registInfo.has==1,radioUnCheck:registInfo.has==0 }"></div>
+				有店
+			</label>
+			<label>
+				<div class="r-regist-radio" ng-click="hasRestaurant(0)" ng-class="{ radioCheck:registInfo.has==0,radioUnCheck:registInfo.has==1 }"></div>
+				无店
+			</label>
+		</div>
+		<div id="createRestaurant" ng-show="restaurant" ng-init="restaurant=true;">
+			<div class="r-regist-div r-regist-div-border">
+				<label class="r-regist-label">
+					店名：
+				</label>
+				<input id="r-regist-restaurant-name" ng-model="registInfo.name" type="text" value="" class="r-regist-input" />
+			</div>
+			<div class="r-regist-div">
+				<div id="r-regist-address" class="r-fack-panel">
+					<div class="r-regist-label">
+						地址：
+					</div>
+					<div class="r-regist-fack-input r-regist-address">{{cityName}}</div>
+					<select class="r-regist-address select" ng-options="city.name for city in cityList" ng-change="getZone(this);" ng-model="cityInfo"></select>
+				</div>
+				<div id="r-regist-district" class="r-fack-panel">
+					<div class="r-regist-label">
+						商圈：
+					</div>
+					<div class="r-regist-fack-input r-regist-district">{{zoneName}}</div>
+					<select class="r-regist-district select" ng-options="zone.name for zone in zoneList" ng-change="setZone(this);" ng-model="zoneInfo"></select>
+				</div>				
+			</div>
+			<div class="r-regist-div r-regist-div-border">
+				<label class="r-regist-label">
+					详细地址：
+				</label>
+				<input id="r-regist-address-detail" ng-model="registInfo.address" type="text" value="" class="r-regist-input" />
+			</div>
+			<div class="r-regist-div r-regist-div-border">
+				<label class="r-regist-label">
+					收货人：
+				</label>
+				<input id="r-regist-contact" ng-model="registInfo.realname" type="text" value="" class="r-regist-input" />
+			</div>
+			<div class="r-regist-div">
+				<div id="r-regist-type" class="r-fack-panel">
+					<div class="r-regist-label">
+						餐馆类型：
+					</div>
+					<div class="r-regist-fack-input r-regist-type">{{typeName}}</div>
+					<select class="r-regist-type select" ng-options="type.showValue for type in typeList" ng-change="setType(this);" ng-model="typeInfo"></select>
+				</div>
+			</div>
+			<div class="r-regist-div">
+				<input type="text" value="" ng-model="registInfo.recommendNumber" class="r-regist-input" placeholder="请输入邀请码" />
+			</div>
+		</div>
+		<div class="r-regist-div">
+			<label>
+				<img class="r-regist-radio" src="./images/radio-checked.png" />
+				同意注册协议
+			</label>
+		</div>
+		<div class="r-regist-div">
+			<button type="button" ng-click="regist()"  id="r-regist-submit">完成注册</button>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,36 @@
+<div class="h-list-panel">
+	<div class="h-list-list-item" id="item-{{$index}}" ng-repeat="list in myList" ng-show="List">
+		<img width="220" height="220" class="h-item-icon" ng-src="{{list.sku.mediaFileUrl}}" />
+		<div class="h-item-introduce">
+			<div class="h-item-introduce-title">{{list.sku.name}}</div>
+			<div class="h-item-introduce-priceinfo">
+				<div class="h-item-introduce-price">￥{{list.salePrice}}</div>
+				<div class="h-item-introduce-market">市场价 ￥{{list.sku.marketPrice}}</div>
+				<div class="h-item-introduce-alert" ng-show="list.sku.maxBuy <= 0">暂无货</div>
+			</div>
+			<div class="h-item-introduce-history">
+				曾购买&nbsp;{{list.count}}&nbsp;次&nbsp;&nbsp;&nbsp;{{list.quantity}}件
+			</div>
+		</div>
+	</div>
+
+	<div class="car-empty-panel" id="buy-not-full" ng-show="noList">
+		<div class="car-empty-div">
+			欢迎来到餐馆无忧
+			<br/>
+			亲，你可以去收藏商品哦
+			<br/>
+			<button class="car-empty-button" ng-click="toMain();">去收藏商品</button>
+		</div>
+	</div>
+
+	<div class="car-not-login-panel" id="buy-not-login" ng-show="noLogin">
+		<div class="car-not-login-div">
+			欢迎来到餐馆无忧
+			<br/>
+			亲，你还未登录哦
+			<br/>
+			<button class="car-not-login-button" ng-click="toLogin();">登录/注册</button>
+		</div>
+	</div>
+</div>

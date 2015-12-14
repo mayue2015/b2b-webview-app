@@ -1,0 +1,121 @@
+header{
+	top: 0px;
+	left: 0px;
+	position:fixed;
+	display:none;
+	width:100%;
+	height:97px;
+	z-index:9999;
+}
+.searchList{
+	background-color: #fafafa;
+	border-bottom: 1px solid #c8c8c8;
+}
+.normal{
+	line-height:96px;
+	text-align:center;
+	font-size:36px;
+	color:#282828;
+	background-color:#fafafa;
+	border-bottom:1px solid #c8c8c8;
+}
+.header-info{
+	position:relative;
+	padding:0px 30px 0px 30px;
+}
+.back{
+	position:absolute;
+	/*
+	display:none;
+	*/
+	left:0px;
+	top:0px;
+	width:82px;
+	height:96px;
+	background:url(../images/back.png) no-repeat;
+	/*
+	background-size:100%;
+	*/
+	background-position:center;
+}
+.header-title{
+	position:relative;
+	display:table;
+	margin:0px auto 0px auto;
+}
+.public-button-right , .public-button-right-search{
+	position:absolute;
+	top:0px;
+	right:30px;
+	height:96px;
+	line-height:96px;
+}
+.public-button-left , .public-button-left-search{
+	position:absolute;
+	top:0px;
+	left:5px;
+	height:96px;
+	line-height:96px;
+}
+.public-add-button{
+	position:relative;
+	display:inline-table;
+	vertical-align:top;
+	margin:0px 0px 0px 25px;
+	height:96px;
+	font-size:30px;
+	color:#d43030;
+}
+.search{
+	font-size:24px;
+	color:#f6c8c8;
+	background-color:#d43030;
+}
+.header-search-panel{
+	position:relative;
+	display:table;
+	margin:0px auto 0px auto;
+	padding:0px 30px 0px 30px;
+}
+.header-search-panel .logo{
+	position:relative;
+	float:left;
+	width:191px;
+	height:96px;
+	background:url(../images/search-logo.png) no-repeat;
+	background-size:100%;
+	background-position:center;
+}
+.header-search-panel .search-panel{
+	position:relative;
+	float:left;
+	margin:4% 0px 0px 20px;
+	width:448px;
+	height:54px;
+	background-color:#bc2b2b;
+	border-radius:8px;
+	text-align:center;
+}
+.header-search-panel .search-icon{
+	position:relative;
+	display:inline-table;
+	width:26px;
+	height:54px;
+	background:url(../images/main-search-icon.png) no-repeat;
+	background-size:100%;
+	background-position:center;
+}
+.header-search-panel .search-keyword{
+	position:relative;
+	display:inline-table;
+	vertical-align:top;
+	margin:3% 0px 0px 10px;
+}
+.header-selectType{
+	position:relative;
+	display:inline-block;
+	margin:0px 0px 0px 10px;
+	width:28px;
+	height:20px;
+	background:url(../images/header-select.png) no-repeat;
+}

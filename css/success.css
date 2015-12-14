@@ -1,0 +1,36 @@
+.s-panel {
+	width: 100%;
+	position: relative;
+	padding:96px 0px 0px 0px;
+}
+.s-success-panel {
+	display: table;
+	width: 550px;
+	margin: 0px auto;
+	text-align: center;
+}
+#s-welcome-word {
+	font-size: 26px;
+	font-weight: 600;
+	margin-top: 70px;
+	margin-bottom: 60px;
+}
+#s-return-button {
+	width: 520px;
+	height: 100px;
+	background-color: #d43030;
+	color: #fff;
+	font-size: 32px;
+	border-radius: 8px;
+	border: 0px;
+	margin-bottom: 70px;
+}
+.s-success-panel hr {
+	border-top: 1px solid #cecece;
+	border-bottom: 0px;
+	margin-bottom: 60px;
+}
+#s-success-word {
+	font-size: 26px;
+	font-weight: 600;
+}

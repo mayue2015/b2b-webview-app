@@ -1,0 +1,23 @@
+<div class="ed-list-panel">
+	<div class="ed-list-list-item" id="item-{{$index}}" ng-repeat="list in myList" ng-show="List" ed-script>
+		<div class="ed-chose-icon {{chose_item}}" ng-click="ChoseItem(this);"></div>
+		<img width="220" height="220" class="ed-item-icon" ng-src="{{list.sku.mediaFileUrl}}" />
+		<div class="ed-item-introduce">
+			<div class="ed-item-introduce-title">{{list.sku.name}}</div>
+			<div class="ed-item-introduce-priceinfo">
+				<div class="ed-item-introduce-price">￥{{list.salePrice}}</div>
+				<div class="ed-item-introduce-market">市场价 ￥{{list.sku.marketPrice}}</div>
+				<div class="ed-item-introduce-alert" ng-show="list.sku.maxBuy <= 0">暂无货</div>
+			</div>
+			<div class="ed-item-introduce-history">
+				曾购买&nbsp;{{list.count}}&nbsp;次&nbsp;&nbsp;&nbsp;{{list.quantity}}件
+			</div>
+		</div>
+	</div>
+	<div class="ed-buy-info-panel">
+		<div class="ed-table-panel">
+			<div class="ed-buy-info-select {{chose_all}}" ng-class="{chose:chose_length == item_length}" ng-click="ChoseAll(this);"><span>全选</span></div>
+			<div class="ed-buy-info-submit" ng-click="deleteCar();">删除</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,21 @@
+.car-not-login-panel {
+	width: 100%;
+	margin: 0px auto;
+}
+.car-not-login-div {
+	width: 720px;
+	margin: 0px auto 0px auto;
+	text-align: center;
+	line-height: 85px;
+	font-size: 39px;
+}
+.car-not-login-button {
+	margin-top: 40px;
+	width: 270px;
+	height: 83px;
+	border: 0px;
+	border-radius: 8px;
+	font-size: 33px;
+	color: #ffffff;
+	background-color: #d43030;
+}

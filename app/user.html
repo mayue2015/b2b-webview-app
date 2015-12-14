@@ -1,0 +1,40 @@
+ <div class="d-user-panel" ng-init="noLogin=false;doLogin=false;">
+	<div class="d-user-info-panel">
+		<div class="d-login-not" ng-show="noLogin">
+			<p>亲，你还未登录哦</p>
+			<a class="d-button-login" ng-click="toLogin();">登录/注册</a>
+		</div>
+		<div class="d-login" ng-show="doLogin">
+			<div class="d-login-icon"></div>
+			<div class="d-login-info">
+				<p>注册号：{{ userInfo.username }}</p>
+				<!--<span>餐馆数：{{ userInfo.restaurantCount }}</span>-->
+			</div>
+		</div>
+	</div>
+	<div class="d-user-function">
+		<div class="d-item" ng-click="changeUrl(1);">
+			<div class="d-item-icon d-item-restaurant"></div>
+			<div class="d-item-title">我的餐馆</div>
+			<div class="d-item-button"></div>
+		</div>
+		<div class="d-item-bottom" ng-click="changeUrl(2);">
+			<div class="d-item-icon d-item-order"></div>
+			<div class="d-item-title">我的订单</div>
+			<div class="d-item-button"></div>
+		</div>
+	</div>
+	<div class="d-user-service">
+		<div class="d-item-service" ng-show="serviceInfo">
+			<div class="d-service-complaints" ng-click="Complaints();">投诉他</div>
+			<div class="d-item-info">
+				<div class="d-item-title">专线客服员</div><br />
+				<a class="d-item-phone" ng-click="call(this.userInfo.telephone)">{{ userInfo.adminName }}&nbsp;&nbsp;{{ userInfo.telephone }}</a>
+			</div>
+		</div>
+		<div class="d-item-bottom">
+			<span class="d-item-title">客服热线：&nbsp;</span>
+			<a class="d-item-phone" ng-init="servicePhone='400-898-1100'" ng-click="call(this.servicePhone)">{{servicePhone}}</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,104 @@
+a {
+	text-decoration: none;
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	background: #fff;
+}
+#service-title {
+	width: 100%;
+	text-align: center;
+	line-height: 77px;
+	font-size: 36px;
+	font-weight: 600;
+	border-bottom: 1px solid #c8c8c8;
+}
+.service-div {
+	width: 540px;
+	margin: 0px auto;
+	text-align: center;
+	font-family: '黑体';
+}
+
+/* 已登录 */
+#login-user-word {
+	margin-top: 100px;
+	font-size: 30px;
+	color: rgb(61,66,69);
+}
+
+#login-icon-div {
+	width: 202px;
+	height: 200px;
+	margin: 60px auto 25px auto;
+	background: url(../images/service-icon.png) no-repeat center;
+}
+
+#login-service-word {
+	font-size: 35px;
+	color: rgb(61,66,69);
+	min-height: 42px;
+}
+#login-service-btn {
+	width: 500px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 45px;
+	color: #fff;
+	background-color: rgb(212,48,48);
+	margin: 50px auto 0px auto;
+	border-radius: 8px;
+	-webkit-border-radius:8px;
+	-moz-border-radius:8px;
+}
+
+
+
+/* 未登录 */
+#unlogin-word {
+	font-size: 30px;
+	margin-top: 90px;
+	width: 100%;
+	color: rgb(61,66,69);
+}
+#unlogin-btn-div {
+	width: 500px;
+	margin: 70px auto 0px auto;
+	text-align: left;
+}
+#unlogin-regist-btn {
+	float: right;
+}
+.unlogin-btn {
+	width: 234px;
+	height: 100px;
+	color: #fff;
+	font-size: 30px;
+	line-height: 100px;
+	border-radius: 8px;
+	-webkit-border-radius:8px;
+	-moz-border-radius:8px;
+	background-color: rgb(212,48,48);
+	text-align: center;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+#unlogin-service-word {
+	margin-top: 100px;
+	font-size: 30px;
+	color: rgb(102,102,102);
+}
+#unlogin-service-btn {
+	width: 500px;
+	height: 100px;
+	margin: 40px auto 0px auto;
+	font-size: 42px;
+	line-height: 100px;
+	color: rgb(212,48,48);
+	border: 2px solid rgb(212,48,48);
+	border-radius: 8px;
+	-webkit-border-radius:8px;
+	-moz-border-radius:8px;
+}

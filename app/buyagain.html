@@ -1,0 +1,23 @@
+<div class="i-buy-panel">
+	<div class="i-buy-list-panel">
+		<div class="i-buy-list-item" id="item-{{$index}}" ng-init="sum=1;" ng-repeat="list in buyList" i-script>
+			<div class="i-buy-select {{chose_item}}" ng-click="ChoseItem(this);"></div>
+			<img class="i-buy-icon" width="220" height="220" ng-src="{{list.url}}" />
+			<div class="i-buy-introduce">
+				<div class="i-buy-introduce-title">{{list.name}}</div>
+				<span class="i-buy-introduce-price">￥{{list.salePrice}}</span>
+				<div class="i-buy-introduce-sumbox">
+					<div id="sub" class="i-sumbox-controller" ng-class="{nocontroller:sum <= 1}" ng-click="changeNumber(this,0);">-</div>
+					<input class="i-buy-sumbox" type="text" ng-model="sum" onkeyup="this.value=this.value.replace(/\D/g,'');ICheckNumber(angular.element(this).scope());" onchange="ICheckNumber(angular.element(this).scope());"/>
+					<div id="add" class="i-sumbox-controller" ng-class="{nocontroller:sum >= 999}" ng-click="changeNumber(this,1);">+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="i-buy-info-panel">
+		<div class="i-table-panel">
+			<div class="i-buy-info-select {{chose_all}}" ng-class="{chose:chose_length == item_length}" ng-click="ChoseAll(this);"><span>全选</span></div>
+			<div class="i-buy-info-submit" ng-click="JoinCar();">加入购物车</div>
+		</div>
+	</div>
+</div>

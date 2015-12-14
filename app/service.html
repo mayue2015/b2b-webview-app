@@ -1,0 +1,46 @@
+<!-- 已登录 -->
+<div id="service-title">
+	客服专员
+</div>
+<div id="login-div" class="service-div" ng-show="doLogin">
+	<div id="login-user-word">
+		<span id="login-username">{{ service.username }}</span>，您的客服专员：
+	</div>
+	<div id="login-icon-div"></div>
+	<div id="login-service-word">
+		{{ service.adminName }}
+	</div>
+	<a id="service-a" ng-click="toCall(this.service.telephone)">
+		<div id="login-service-btn">
+			<div style="display:inline-block;height:55px;vertical-align:top;margin-top:10px;">
+				<img src="./images/login-service-btn-phone.png" />
+			</div>
+			<span id="service-phoneNumber">{{ service.telephone }}</span>
+		</div>
+	</a>
+</div>
+<!-- 未登录 -->
+<div id="unlogin-div" class="service-div" ng-hide="doLogin">
+	<div id="unlogin-word">
+		你还没有登录哟，登录后你会拥有专属你的客服专员，随时解决各种问题！
+	</div>
+	<div id="unlogin-btn-div">
+		<div id="unlogin-login-btn" class="unlogin-btn" ng-click="toLogin();">
+			登录
+		</div>
+		<div id="unlogin-regist-btn" class="unlogin-btn" ng-click="toRegist();">
+			注册
+		</div>
+	</div>
+	<div id="unlogin-service-word">
+		客服中心电话：
+	</div>
+	<a ng-click="toCall('4008981100')">
+		<div id="unlogin-service-btn">
+			<div style="display:inline-block;height:55px;vertical-align:top;margin-top:10px;">
+				<img src="./images/service-btn-phone.png" />
+			</div>
+			400-898-1100
+		</div>
+	</a>
+</div>

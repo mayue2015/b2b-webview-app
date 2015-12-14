@@ -1,0 +1,117 @@
+<div id="wrapper">
+	<!-- header-->
+	<div id="header">
+		<header class="normal">
+			<div class="header-info">
+				<div class="public-button-left" ng-click="leftClick();"></div>
+				<div class="public-button-right" ng-click="rightClick();"></div>
+				<div class="back" ng-click="back()"></div>
+				<div class="header-title" ng-click="choseCategory();"></div>
+			</div>
+		</header>
+		<header class="searchList">
+			<div class="header-info">
+				<div class="public-button-left-search"></div>
+				<div class="public-button-right-search"></div>
+				<div class="f-search-input-div">
+					<img src="./images/search-icon.png" />
+					<input ng-model="keyWord" type="text" readonly ng-click="searchClick()" placeholder="寻找调料、食材" />
+				</div>
+				<div class="back" ng-click="back()"></div>
+				<div class="header-title"></div>
+			</div>
+		</header>
+		<header class="search">
+			<div class="header-search-panel">
+				<div class="logo"></div>
+				<div class="search-panel" ng-click="toSearch()">
+					<div class="search-icon"></div>
+					<div class="search-keyword">寻找调料、食材</div>
+				</div>
+			</div>
+		</header>
+	</div>
+	<!-- end -->
+
+	<!-- public -->
+	<div id="uiView" ui-view></div>
+	<!-- end -->
+
+	<!--carInfo-->
+	<div class="public-car" ng-show="weixin" ng-init="publics.type=0;publics.total=0;publics.money=0;">
+		<div class="public-info-panel">
+			<div class="public-info-title">共计：</div>
+			<div class="public-info-detail">
+				<p>共{{publics.type}}种{{publics.total}}件商品</p>
+				<span class="public-info-cost">￥{{publics.money}}</span>
+			</div>
+			<div class="public-info-submit" ng-click="weixinCar();">去购物车</div>
+		</div>
+	</div>
+	<!--end-->
+
+	<!-- alert -->
+	<div id="Myalert" ng-show="alt_panel">
+		<div class="alert-panel" ng-class="{'alert-background-light':panel_type == 'light','loading-background':panel_type == 'loading','alert-background-opacity':panel_type == 'opacity','alert-background-deep':panel_type == 'deep'}">
+		<!-- 文字类型 -->
+			<div class="alert-panel-div alert-message-div" ng-show="alt_activity">
+				<div class="alert-message-title">
+					{{ alt_act.title }}
+				</div>
+				<div class="alert-message-content">
+					{{ alt_act.content }}
+				</div>
+				<div class="alert-message-close" ng-click="alt_activity_close_fun()">
+					{{ alt_act.close_word }}
+				</div>
+			</div>
+		<!-- 首页confirm -->
+			<div class="alert-panel-div alert-confirm-div" ng-show="alt_main">
+				<div class="alert-confirm-close" ng-show="confirm" ng-click="mainConfirmClose();">
+				</div>
+				<div id="mainAlert" class="alert-confirm-title">
+					<div class="alert-phone" ng-show="alt_confirm.phone!=''" ng-click="callPhone();">{{alt_confirm.phone}}</div>
+					{{alt_confirm.title}}
+				</div>
+				<div class="alert-btn-div">
+					<div class="alert-btn-true" ng-click="alt_true_fun()">
+						{{alt_confirm.true_word}}
+					</div>
+					<div class="alert-btn-false" ng-click="alt_false_fun()">
+						{{alt_confirm.false_word}}
+					</div>
+				</div>
+			</div>
+		<!-- confirm -->
+			<div class="alert-panel-div alert-confirm-div" ng-show="alt_normal">
+				<div class="alert-confirm-close" ng-show="confirm" ng-click="confirmClose();">
+				</div>
+				<div class="alert-confirm-title">
+					{{alt_confirm.title}}
+					<div class="alert-phone" ng-show="alt_confirm.phone!=''" ng-click="callPhone();">{{alt_confirm.phone}}</div>
+				</div>
+				<div class="alert-btn-div">
+					<div class="alert-btn-true" ng-click="alt_true_fun()">
+						{{alt_confirm.true_word}}
+					</div>
+					<div class="alert-btn-false" ng-click="alt_false_fun()">
+						{{alt_confirm.false_word}}
+					</div>
+				</div>
+			</div>
+			<!-- 消息类型 -->
+			<div class="alert-panel-div alert-word-div" ng-show="alt_alert">
+				<span>
+					{{alt_msg}}
+				</span>
+			</div>
+			<!--加载-->
+			<div class="loading-panel" ng-show="loading">
+				<div class="loading-radius"></div>
+				<div class="loading-icon"></div>
+			</div>
+			<!--end-->
+		</div>
+	</div>
+	<!-- end -->
+</div>

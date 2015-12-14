@@ -1,0 +1,24 @@
+<div class="c-category-panel">
+	<div class="c-nologin-alert" ng-init="doLogin=true;" ng-show="doLogin">
+		仅供体验：只显示了调料的10%
+	</div>
+	<div class="c-search-panel">
+		<div class="c-search-input" ng-click="toSearch()">
+			<div class="c-search-icon"></div>
+			<span class="c-search-hold">寻找调料、食材</span>
+		</div>
+	</div>
+	<ul class="c-category-list">
+		<li class="c-category-item" ng-class="{chose:categoryId == c_list.categoryId}" ng-init="index=$index" ng-model="index" ng-click="ChoseCategory(this);" ng-repeat="c_list in categoryList" c-script>
+			<div class="c-category-item-panel">
+				<div class="c-category-icon"  style="background:url({{c_list.url}}) no-repeat center;"></div>
+				<div class="c-category-title">{{c_list.name}}</div>
+			</div>
+			<div class="c-chosebar"></div>
+		</li>
+	</ul>
+	<div class="c-category-detil-panel">
+		<div class="c-category-detil-item" ng-class="{chose:type == 0}" ng-init="index=0" ng-model="index" ng-click="ChoseType(this,0);">全部</div>
+		<div class="c-category-detil-item" ng-class="{chose:type == c_detailList.categoryId}" ng-click="ChoseType(this);" ng-init="index=$index+1" ng-model="index" ng-repeat="c_detailList in detailList" c-detail>{{c_detailList.name}}</div>
+	</div>
+</div>

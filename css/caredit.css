@@ -1,0 +1,14 @@
+.car-buy-list-item{
+	position: relative;
+	display: table;
+	padding: 0px 40px 0px 34px;
+	margin: 0px auto 0px auto;
+	height: 232px;
+	border-bottom: 1px solid #c8c8c8;
+}
+.car-buy-icon{
+	position: relative;
+	display: inline-table;
+	vertical-align: top;
+	margin: 4% 40px 0px 40px;
+}

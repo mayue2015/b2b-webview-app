@@ -1,0 +1,55 @@
+<div class="j-panel">
+	<div class="j-panel-edit">
+		<div class="j-panel-row">
+			<div class="j-panel-row-div">
+				<div class="j-panel-label j-panel-td">餐馆名称</div>
+				<div class="j-panel-td">
+					<input type="text" class="j-panel-input j-deit-item" ng-model="name" value="{{ Info.name }}" />
+				</div>
+			</div>
+		</div>
+		<div class="j-panel-row">
+			<div class="j-panel-row-div">
+				<div class="j-panel-label j-panel-td">地址</div>
+				<div class="j-panel-td">
+					<input type="text" class="j-panel-input" value="{{ Info.address }}" readonly="readonly" />
+				</div>
+			</div>
+		</div>
+		<div class="j-panel-row">
+			<div class="j-panel-row-div">
+				<div class="j-panel-label j-panel-td">商圈</div>
+				<div class="j-panel-td">
+					<input type="text" class="j-panel-input" value="{{ Info.zone.name }}"  readonly="readonly"/>
+				</div>
+			</div>
+		</div>
+		<div class="j-panel-row">
+			<div class="j-panel-row-div">
+				<div class="j-panel-label j-panel-td">收货人</div>
+				<div class="j-panel-td">
+					<input type="text" class="j-panel-input j-deit-item" ng-model="contact" value="{{ Info.realname }}"  />
+				</div>
+			</div>
+		</div>
+		<div class="j-panel-row">
+			<div class="j-panel-row-div">
+				<div class="j-panel-label j-panel-td">电话</div>
+				<div class="j-panel-td">
+					<input type="text" class="j-panel-input j-deit-item" onkeyup="this.value=this.value.replace(/\D/g,'');" ng-model="phone" value="{{ Info.telephone }}" />
+				</div>
+			</div>
+		</div>
+		<div class="j-panel-row">
+			<div class="j-panel-row-div">
+				<div class="j-panel-label j-panel-td">餐馆类型</div>
+				<div class="j-panel-td">
+					<input type="text" class="j-panel-input" value="{{ Info.typeMessage }}"  readonly="readonly" />
+				</div>
+			</div>
+		</div>
+		<div class="j-panel-row-div j-panel-row-div-last">
+			<button id="j-panel-submit" ng-click="restaurantEdit();">修改提交</button>
+		</div>
+	</div>
+</div>

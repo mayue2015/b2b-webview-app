@@ -1,0 +1,54 @@
+<div id="car-list" class="e-car-panel" ng-init="hasCar=false;noCar=false;noLogin=false;">
+	<div ng-show="hasCar">
+		<div class="e-car-alert">
+			<!--温馨提示：满{{shippingFeeLimit}}元即免运费-->
+			{{shoppingTip}}
+		</div>
+		<div class="e-car-list-panel">
+			<div class="e-car-list-item" id="item-{{$index}}" ng-init="sum=list.number;" ng-repeat="list in carList" e-Script>
+				<div class="e-car-select {{chose_item}}" ng-class="{'e-car-select-none':list.maxBuy <= 0}" ng-click="ChoseItem(this);"></div>
+				<img class="e-car-icon" width="220" height="220" ng-src="{{list.url}}" />
+				<div class="e-car-introduce">
+					<div class="e-car-introduce-title">{{list.name}}</div>
+					<span class="e-car-introduce-price">￥{{list.price}}</span>
+					<div class="e-car-introduce-sumbox">
+						<div id="sub" class="e-sumbox-controller" ng-class="{nocontroller:sum <= 1}" ng-click="changeNumber(this,0);">-</div>
+						<input class="e-car-sumbox" type="text" price="{{list.price}}" ng-disabled="{{list.maxBuy}} <= 0" ng-model="sum"  onkeyup="this.value=this.value.replace(/\D/g,'');ECheckNumber(angular.element(this).scope());" onchange="ECheckNumber(angular.element(this).scope());"/>
+						<div id="add" class="e-sumbox-controller" ng-class="{nocontroller:sum >= {{list.maxBuy}}}" ng-click="changeNumber(this,1);">+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="e-car-info-panel" ng-init="edit=true;chose_all='e-car-info-select-chose'">
+			<div class="e-table-panel">
+				<div class="e-car-info-select {{chose_all}}" ng-class="{chose:chose_length == item_length}" ng-click="ChoseAll(this);"><span>全选</span></div>
+				<div class="e-car-info-sum-title">共计：</div>
+				<div class="e-car-info-sum">
+					<p>共{{carInfo.type}}种{{carInfo.total}}件商品</p>
+					<span class="e-car-info-cost">￥{{carInfo.money}}</span>
+				</div>
+				<div ng-show="edit" class="e-car-info-submit" ng-click="toConfig();">提交订单</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="car-empty-panel" ng-show="noCar">
+		<div class="car-empty-div">
+			欢迎来到餐馆无忧
+			<br/>
+			亲，您的购物车还是空的哦
+			<br/>
+			<button class="car-empty-button" ng-click="toMain();">逛一逛</button>
+		</div>
+	</div>
+
+	<div class="car-not-login-panel" ng-show="noLogin">
+		<div class="car-not-login-div">
+			欢迎来到餐馆无忧
+			<br/>
+			亲，你还未登录哦
+			<br/>
+			<button class="car-not-login-button" ng-click="toLogin();">登录/注册</button>
+		</div>
+	</div>
+</div>

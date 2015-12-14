@@ -1,0 +1,57 @@
+.j-panel {
+	padding:96px 0px 0px 0px;
+	width: 100%;
+	height:100%;
+	background-color: #ffffff;
+	font-size: 30px;
+	position: relative;
+}
+.j-panel-edit {
+	display table;
+	margin: 0px auto;
+}
+.j-panel-row {
+	border-bottom: 1px solid #cecece;
+}
+.j-panel-row-div {
+	width: 650px;
+	height: 80px;
+	line-height: 80px;
+	margin: 0px auto;
+	position: relative;
+}
+.j-panel-row-div-last {
+	margin-top: 140px;
+	margin-bottom: 304px;
+	text-align: center;
+}
+.j-panel-label {
+	/*
+	display: inline-block;
+	*/
+	width: 400px;
+	color: #999999;
+}
+.j-panel-td {
+	display: table-cell;
+}
+.j-panel-input {
+	width: 480px;
+	font-size: 30px;
+	border: 0px;
+	background: transparent;
+	height: 80px;
+	color:#999999;
+}
+.j-deit-item{
+	color:#333333;
+}
+#j-panel-submit {
+	width: 500px;
+	height: 80px;
+	background-color: #d43030;
+	border: 0px;
+	border-radius: 8px;
+	font-size: 30px;
+	color: #ffffff;
+}

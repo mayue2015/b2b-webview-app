@@ -1,0 +1,32 @@
+.download-panel {
+	width: 720px;
+	margin: 0px auto;
+}
+.download-title {
+	width: 100%;
+	height: 88px;
+	line-height: 88px;
+	text-align: center;
+	font-size: 36px;
+	font-weight: 600;
+	border-bottom: 1px solid #c8c8c8;
+}
+.download-content {
+	width: 100%;
+	text-align: center;
+}
+#download-logo {
+	margin: 94px auto 120px auto;
+}
+#download-ios {
+	width: 325px;
+	height: 94px;
+	margin: 0px auto 30px auto;
+	background: url(../images/download-ios.png);
+}
+#download-android {
+	width: 325px;
+	height: 94px;
+	margin: 0px auto 30px auto;
+	background: url(../images/download-android.png) no-repeat;
+}

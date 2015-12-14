@@ -1,0 +1,133 @@
+.r-panel {
+	padding:96px 0px 0px 0px;
+	width: 100%;
+	background-color: #f4f4f4;
+	font-size:30px;
+	position: relative;
+}
+.r-regist-panel {
+	display: table;
+	margin: 0px auto;
+}
+.r-regist-div {
+	margin-top: 20px;
+	position: relative;
+}
+.r-regist-input {
+	display:inline-block;
+	padding:0px 0px 0px 24px;
+	width: 637px;
+	height: 88px;
+	border: 1px solid #c8c8c8;
+	border-radius: 8px;
+	font-size: 30px;
+	-webkit-tap-highlight-color:rgba(255,255,255,0);
+}
+.r-regist-radio {
+	width: 36px;
+	height: 36px;
+	display: inline-block;
+	position: relative;
+	top: 5px;
+}
+.radioCheck {
+	background: url(../images/radio-checked.png);
+}
+.radioUnCheck {
+	background: url(../images/radio.png);
+}
+.r-fack-panel{
+	position: relative;
+	display:inline-table;
+	background-color:#ffffff;
+	border: 1px solid #c8c8c8;
+	border-radius: 8px;
+}
+.r-regist-label {
+	position: relative;
+	display:inline-table;
+	padding:0px 0px 0px 24px;
+	width: 180px;
+	height:90px;
+	line-height:90px;
+}
+#r-regist-address-detail , #r-regist-restaurant-name , 	#r-regist-contact{
+	position:absolute;
+	top:0px;
+	right:0px;
+}
+#r-regist-restaurant-name {
+	width: 520px;
+}
+#r-regist-contact {
+	width: 490px;
+}
+#r-regist-address-detail {
+	width: 460px;
+}
+.r-regist-div .select {
+	position:absolute;
+	top:0px;
+	right:0px;
+	font-size: 30px;
+	height: 88px;
+	appearance:none;
+	border: 1px solid #c8c8c8;
+	border-radius: 8px;
+	background-color: #ffffff;
+	opacity:0;
+}
+.r-regist-div .r-regist-fack-input{
+	position:absolute;
+	top:0px;
+	right:0px;
+	height:90px;
+	line-height:90px;
+}
+#r-regist-address{
+	width:280px;
+}
+#r-regist-address .r-regist-label , #r-regist-district .r-regist-label{
+	width:120px;
+}
+.r-regist-address {
+	width:150px;
+}
+#r-regist-district {
+	width:370px;
+}
+.r-regist-district {
+	width: 250px;
+}
+#r-regist-type {
+	width: 660px;
+}
+.r-regist-type {
+	width: 480px;
+}
+#r-regist-district-label {
+	left: 310px;
+}
+
+#r-regist-submit {
+	width: 660px;
+	height: 88px;
+	background-color: #d43030;
+	color: #fff;
+	font-size: 32px;
+	border-radius: 8px;
+	border: 0px;
+	margin-bottom: 20px;
+	outline:medium;
+}
+.r-regist-div-border {
+	width: 660px;
+	height: 88px;
+	border-radius: 8px;
+	background-color: #ffffff;
+	border: 1px solid #c8c8c8;
+}
+.r-regist-div-border>input {
+	border: 0px;
+	background-color: transparent;
+}

@@ -1,0 +1,77 @@
+#buy-not-login,#buy-not-full {
+	margin-top: 120px;
+}
+.h-list-panel{
+	position:relative;
+	padding:96px 0px 0px 0px;
+}
+.h-list-list-item{
+	position:relative;
+	display:table;
+	padding:0px 60px 0px 20px;
+	margin:0px auto 0px auto;
+	height:252px;
+	border-bottom:1px solid #c8c8c8;
+	background-color:#ffffff;
+}
+.h-item-icon{
+	position:relative;
+	display:inline-table;
+	vertical-align:top;
+	margin:3% 60px 0px 0px;
+}
+.h-item-introduce{
+	position:relative;
+	display:inline-table;
+	vertical-align:bottom;
+	bottom:10px;
+	margin:0px;
+	width:360px;
+	text-align:left;
+}
+.h-item-introduce-title{
+	position:relative;
+	margin:0px 0px 50px 0px;
+	min-height:45px;
+	font-size:28px;
+	color:#3c3c3c;
+}
+.h-item-introduce-priceinfo{
+	position:relative;
+	margin:0px 0px 25px 0px;
+	height:35px;
+	line-height:35px;
+}
+.h-item-introduce-price{
+	float:left;
+	font-size:30px;
+	color:#eb2828;
+}
+.h-item-introduce-market{
+	float:left;
+	margin:0px 0px 0px 10px;
+	font-size:21px;
+	color:#999999;
+	text-decoration:line-through;
+}
+.h-item-introduce-alert{
+	float:right;
+	font-size:21px;
+	color:#eb2828;
+}
+.h-item-introduce-history{
+	font-size:24px;
+	color:#666c70;
+}
+.h-add-buyagain{
+	position:relative;
+	margin:20px 0px 0px 21px;
+	width:133px;
+	height:50px;
+	line-height:50px;
+	text-align:center;
+	font-size:26px;
+	color:#d62222;
+	border:2px solid #d62222;
+	border-radius:8px;
+}

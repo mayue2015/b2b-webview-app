@@ -1,0 +1,59 @@
+<div class="b-main-panel">
+	<div class="b-ads-panel">
+		<ul class="b-ads-ul">
+			<li ng-click="toActivity(this);" link="banner-{{$index}}" ng-repeat="bannerList in banners" banner-slide>
+				<img width="720" height="340" ng-src="{{bannerList.imgUrl}}">
+			</li>
+		</ul>
+		<div class="b-ads-point-panel">
+			<div class="b-ads-point b-point-chose" link="banner-{{$index}}" ng-repeat="bannerList in banners"></div>
+		</div>
+	</div>
+	<div class="b-service-panel">
+		<div class="b-right">
+			<a id="b-car" class="b-item-panel" ng-click="toCar();">
+				<div class="b-item-info">
+					<div class="b-item-title">购物车</div>
+					<img class="b-item-icon" src="images/main-car.png" />
+				</div>
+			</a>
+			<a id="b-activity" class="b-item-panel" ng-init="bannerList.redirectUrl=''" ng-click="toActivity(this)">
+				<div class="b-item-info">
+					<div class="b-item-title">优惠活动</div>
+					<img class="b-item-icon" src="images/main-activity.png" />
+				</div>
+			</a>
+			<div id="b-service" class="b-item-panel" ng-click="showService()">
+				<div class="b-item-info">
+					<div class="b-item-title">客服</div>
+					<img class="b-item-icon" src="images/main-service.png" />
+				</div>
+			</div>
+		</div>
+		<div class="b-left">
+			<div class="b-category-panel" ng-click="toCategory()">
+				<div class="b-category-title">厨房调料</div>
+				<div class="b-category-info">
+					正牌调味品<br />
+					价格实惠,一站供应<br />
+					12大类 5000个品种
+				</div>
+				<img class="b-category-info-pic" src="images/main-category.png" />
+			</div>
+		</div>
+	</div>
+	<div class="b-order-panel" ng-init="orderList=true;">
+		<div class="b-order-item order-title">今日订单</div>
+		<div class="b-order-item" ng-show="orderNone">暂无订单</div>
+		<div class="b-order-list" ng-show="orderList" ng-init="index=$index" ng-repeat="(index,orderList) in Myorder" ng-click="toDetail(this);" b-script>
+			<div class="b-order-list-item">
+				<p>订单号:{{orderList.id}}</p>
+				<p>订单金额：<span>￥{{orderList.total}}</span></p>
+				<div class="b-order-item-picList">
+					<img width="116" height="116" ng-repeat="picList in orderList.orderItems" ng-show="{{$index}} < 4" ng-src="{{picList.sku.mediaFileUrl}}" />
+					<div class="b-order-list-select"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

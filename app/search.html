@@ -1,0 +1,27 @@
+<div class="search-panel">
+	<div class="search-search-div">
+		<div class="search-panel-table">
+			<a class="search-input-img" ng-click="back();">
+				<img src="./images/back.png" />
+			</a>
+			<div class="search-input-div">
+				<div class="search-icon-fack"></div>
+				<input ng-model="keyWord" type="text" placeholder="寻找调料、食材" />
+			</div>
+			<div class="search-input-word" ng-click="search()">
+				搜索
+			</div>
+		</div>
+	</div>
+	<div class="search-panel-div search-panel-title">
+		<div>
+			搜索历史
+		</div>
+	</div>
+	<div class="search-panel-div" ng-click="clickHistory(this)" ng-repeat="product in list">
+		<div>
+			{{ product.name }}
+		</div>
+	</div>
+	<button class="search-button" ng-show="list != ''" ng-click="cleanUsed()">清空搜索历史</button>
+</div>

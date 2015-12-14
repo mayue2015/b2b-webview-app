@@ -1,0 +1,61 @@
+<div class="f-product-panel" ng-init="lead=true;" ng-show="lead">
+	<div class="f-product-controller-panel" ng-init="sortType='sellCount'">
+		<div id="f-price" class="f-product-controller-item" ng-class="{chose:sortType == 'price'}" ng-click="sortList(this,0);">
+			价格
+			<div class="f-controller-sort">
+				<div class="f-controller-sort-asc" ng-class="{asc:sortMethod == 'asc'}"></div>
+				<div class="f-controller-sort-desc" ng-class="{desc:sortMethod == 'desc'}"></div>
+			</div>
+		</div>
+		<div id="f-sellCount" class="f-product-controller-item f-product-controller-middle" ng-class="{chose:sortType == 'sellCount'}" ng-click="sortList(this,1);">
+			销量优先
+		</div>
+		<div class="f-product-controller-item" ng-click="choseBrand();">
+			品牌筛选
+			<div class="f-controller-sort-band"></div>
+		</div>
+	</div>
+	<div class="f-chose-brand-panel" ng-init="brandId=''" ng-show="brand">
+		<div class="f-brand-select">
+			<div class="f-brand-option" ng-class="{chose:brandId == 0}" ng-click="selectBrand(this,0);">
+				全部
+			</div>
+			<div class="f-brand-option" ng-class="{chose:brandId == brand.id}" ng-click="selectBrand(this);" ng-repeat="brand in brandList">
+				{{brand.brandName}}
+			</div>
+		</div>
+	</div>
+	<div class="f-chose-category-panel" ng-init="categoryId=''" ng-show="category">
+		<div class="f-category-select">
+			<div class="f-category-option" ng-class="{chose:categoryAll == true}" ng-click="selectCategory(this,0);">
+				全部
+			</div>
+			<div class="f-category-option" ng-class="{chose:categoryId == category.categoryId}" ng-click="selectCategory(this);" ng-repeat="category in categoryList">
+				{{category.name}}
+			</div>
+		</div>
+	</div>
+	<div class="f-product-list-panel">
+		<div class="f-product-list-show" id="item-{{$index}}" ng-init="sum=1" ng-repeat="list in productList" f-Script>
+			<div class="f-product-list-item">
+				<div class="f-item-collect" ng-click="collect(this);">收藏</div>
+				<img width="220" height="220" class="f-item-icon" ng-src="{{list.url}}" />
+				<div class="f-item-introduce">
+					<div class="f-item-introduce-title">{{list.name}}</div>
+					<div class="f-item-introduce-priceinfo">
+						<div class="f-item-introduce-price">￥{{list.price}}</div>
+						<div class="f-item-introduce-market">市场价 ￥{{list.marketPrice}}</div>
+						<div class="f-item-introduce-alert">{{status}}</div>
+					</div>
+					<div class="f-item-introduce-sumbox"><div id="sub" class="f-sumbox-controller" ng-class="{'f-sumbox-nocontroller':sum <= 1}" ng-click="changeNumber(this,0);">-</div><input class="f-item-sumbox" type="text" ng-model="sum" onkeyup="this.value=this.value.replace(/\D/g,'');FCheckNumber(angular.element(this).scope());" onchange="FCheckNumber(angular.element(this).scope());"/><div id="add" class="f-sumbox-controller" ng-class="{'f-sumbox-nocontroller':sum >= list.maxBuy}" ng-click="changeNumber(this,1);">+</div></div>
+					<div class="f-item-joincar" ng-click="joinCar(this);">加入购物车</div>
+					<!--<div class="f-item-collect {{collect_chose}}" ng-click="collect(this);"></div>-->
+				</div>
+			</div>
+		</div>		
+	</div>
+</div>
+
+<div class="app-lead" ng-hide="lead" ng-click="closeLead();">
+	<div class="app-lead-click"></div>
+</div>
